@@ -1,0 +1,55 @@
+/*
+@font-face {
+  font-family: 'Orbitron';
+  src: url(./Orbitron/Orbitron-VariableFont_wght.ttf);
+}*/
+
+:root{
+  --header-background-color: black;
+  --header-color: white;
+  --nav-link-background-color: white;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Tahoma', sans-serif;
+  background-color: white;
+}
+
+header {
+  margin: 20px auto;
+  max-width: 600px;
+  background-color: var(--header-background-color);
+  color: var(--header-color);
+  display: flex;
+  justify-content: space-between;
+}
+header h1 {
+  font-family: serif;
+}
+header nav {
+  font-family: serif;
+}
+header a {
+  color: var(--nav-link-background-color);
+}
+
+main {
+  margin: 5px auto;
+  max-width: 600px;
+}
+
+#aboutMe p {
+  color: black;
+}
+#headShot {
+  width: 150px;
+  float: right;
+  border-radius: 50%;
+}
+
+article section {
+  padding: 10px;
+}
