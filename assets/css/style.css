@@ -12,7 +12,7 @@
   --max-section-width: 90%;
 
   --yellow:#dddb92;
-  --hover-yellow:#e1dd80;
+  --hover-yellow:#dbd767;
   --green: #72955d;
   --blue: #3d5079;
   --blue-shadow: #394a6d;
@@ -114,7 +114,7 @@ aside {
   width: 110px;
   color: var(--blue);
   font-size: 1.2em;
-  width: 120px;
+  width: 120px; 
 }
 .cell {
   display: table-cell; 
@@ -162,7 +162,7 @@ main {
   max-width: unset;
   flex: 1 1 100%;
 }
-#figure{
+.figure{
   background-size: cover;
   opacity: .2;
   position: absolute;
@@ -179,15 +179,14 @@ figcaption{
   transition: background-color var(--transformation-speed) ease;
 }
 
-.flex-item:hover {
-  border: 3px solid var(--hover-yellow);
-}
-.flex-item:hover figcaption {
+
+#projects section:hover .figure{
+  opacity: 0.6;
+} 
+#projects section:hover figcaption{
   background-color: var(--hover-yellow);
-}
-#figure:hover{
-  opacity: .6;
-}
+} 
+
 
 #iago div {
   background-image: url("../media/zoom/iago.png");
