@@ -1,12 +1,12 @@
 //console.log("script.js loaded")
 
-//populate ageSpan
+//dynamically populate my son's age
 var currentDate = new Date();
 var age = currentDate.getFullYear() - 2016;
 if (currentDate.getMonth() <= 8 && currentDate.getDate() < 2) {age--};
 document.getElementById("ageSpan").innerHTML = age;
 
-//modals
+//listeners to control modal windows 
 document.addEventListener("DOMContentLoaded", function() {
 
     document.getElementById("iago").addEventListener("click", (e) => {

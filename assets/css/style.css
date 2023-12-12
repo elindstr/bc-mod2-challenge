@@ -12,14 +12,13 @@
   --max-body-width: 1200px;
   --max-section-width: 90%;
 
-  --yellow:#e7e5b6;
+  --yellow:#d7d5a3;
   --hover-yellow:#e2df8b;
-  --green: #93C178;
-  --blue: #465C8B;
-  --white: #DFDCE3;
+  --green: #72955d;
+  --blue: #3d5079;
+  --white: #e1dee7;
 
   --transformation-speed: .3s
-
 }
 * {
   margin: 0;
@@ -100,10 +99,11 @@ nav a {
 
 .row {
   display: table;
-  margin-top: 20px;
+  margin-top: 15px;
   width: 100%;
 }
 aside {
+  border-top: 2px solid var(--green);
   border-right: 2px solid var(--green);
   width: 110px;
   color: var(--blue);
