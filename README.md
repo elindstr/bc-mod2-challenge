@@ -9,7 +9,18 @@ I used the Xcode simulator to capture screenshots of an iPhone 15 running the de
 
 ## Screenshots
 
-...
+<table>
+  <tr>
+    <td style="vertical-align: top" width="30%">
+      <img src="assets/screenshots/page.png" alt="screenshot of deployed portfolio website (2023-12-12)" width="300px"/><br>
+      <i>screenshot of portfolio (2023-12-12)</i>
+    </td>
+    <td style="vertical-align: top" width="30%">
+      <img src="assets/screenshots/modal.png" alt="screenshot of deployed portfolio website displaying a featured project (2023-12-12)" width="300px"/><br>
+      <i>screenshot of portfolio displaying a featured project (2023-12-12)</i>
+    </td>
+  </tr>
+</table>
 
 ## Acceptance Criteria
 
