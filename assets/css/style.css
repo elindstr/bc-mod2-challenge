@@ -1,4 +1,3 @@
-
 @font-face {
   font-family: 'Crimson';
   src: url(./Crimson_Text/CrimsonText-Regular.ttf);
@@ -12,13 +11,14 @@
   --max-body-width: 1200px;
   --max-section-width: 90%;
 
-  --yellow:#d7d5a3;
-  --hover-yellow:#e2df8b;
+  --yellow:#dddb92;
+  --hover-yellow:#e1dd80;
   --green: #72955d;
   --blue: #3d5079;
+  --blue-shadow: #394a6d;
   --white: #e1dee7;
 
-  --transformation-speed: .3s
+  --transformation-speed: .2s
 }
 * {
   margin: 0;
@@ -53,17 +53,22 @@ header h1 {
   background-color: var(--white);
   color: var(--blue);
 }
-nav li {
-  display: inline;
+nav {
+  float: right;
 }
 nav a {
   margin: 10px;
   color: var(--white);
   font-family: 'Vollkorn', 'Georgia', serif;
   font-size: 1.2em;
-
 }
-
+a {
+  font-weight: normal;
+  /*transition: font-weight .3s ease-in;*/
+}
+a:hover {
+  font-weight:900;
+}
 
 #subtitle-container {
   margin: 20px auto;
@@ -84,6 +89,8 @@ nav a {
 }
 #subtitle {
   padding: 5px;
+  padding-top: 0px;
+  padding-bottom: 0px;
   position: absolute;
   bottom: 10%;
   right: 5%;
@@ -95,7 +102,6 @@ nav a {
 #subtitle-quotes{
   font-size: 1.5em;
 }
-
 
 .row {
   display: table;
@@ -221,7 +227,6 @@ figcaption{
   font-size: 1.2em;
 }
 
-
 footer {
   margin: 20px auto;
   padding: 10px;
@@ -232,13 +237,15 @@ footer {
   text-align: right;
 }
 
+@media screen and (max-width: 650px) {
+  nav {
+    float: unset;
+    display: grid;
+  }
+}
 @media screen and (max-width: 590px) {
   header h1 {
     font-size: 2em;
-  }
-  nav ul {
-    display: flex;
-    flex-direction: column;
   }
   #subtitle {
     bottom: 10%;
@@ -257,6 +264,7 @@ footer {
     padding: unset;
   }
   aside {
+    border-top: unset;  /*I'm not sure why I need this, but I do.*/
     border-right: unset;
     border-bottom: 2px solid var(--green);
   }
@@ -269,7 +277,6 @@ footer {
   #contacts {
     display: flex;
     flex-direction: column;
-    height: 120px;
   }
   #contacts a {
     margin-left: 30px;

@@ -3,7 +3,7 @@
 ## Description
 This is a portfolio website showing off some of my projects.
 
-I enjoyed practicing a bunch of css tricks making this: flex boxes; transitions; css variables; google fonts; smooth scroll behavior; modal windows; and semi-transparent background images. 
+I enjoyed practicing a bunch of css tricks making this: responsive design; flex boxes; semi-transparent background images with hover transitions; css variables; google fonts; smooth scroll behavior; modal windows. 
 
 I used the Xcode simulator to capture screenshots of an iPhone 15 running the deployed apps.
 
