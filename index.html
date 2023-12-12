@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" href="data:,">
   <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/modal.css">
   <title>Eric's Portfolio</title>
 </head>
 <body>
@@ -13,54 +14,209 @@
     <h1>Eric Lindstrom</h1>
     <nav>
       <ul>
-        <li>about me</li>
-        <li>projects</li>
-        <li>contacts</li>
+        <li><a href="#aboutMeAnchor">about me</a></li>
+        <li><a href="#projectsAnchor">projects</a></li>
+        <li><a href="#contactAnchor">contact</a></li>
       </ul>
     </nav>
   </header>
-  <div id="headerImage"></div>
+
+  <section id="subtitle-container">
+    <div id="subtitle-figure">.</div>
+    <div id="subtitle"><span id="subtitle-quotes">&ldquo;</span>Full stack tinkerer by night<span id="subtitle-quotes">&rdquo;</span></div>
+  </section>
 
   <main>
-  
-    <article id="aboutMe">
-      <img id="headShot" src="assets/media/bio-square-lg.jpg">
-      <p>Hi! I'm Eric. I'm a lawyer by day, full stack tinkerer by night. I build games to delight 
-      my <span id="ageSpan"></span>-year-old, legal-stuff that interests me or helps me at work, 
-      and lots of other stuff. I'm currently levelling up my skillz in a web dev coding bootcamp.</p>
+
+    <!--About Me-->
+    <article class="row" id="aboutMeAnchor">
+      <aside class="cell"><h2>about me</h2></aside>  
+      <section id="aboutMe" class="cell">
+        <p>Hi! I'm Eric. Lawyer by day, full stack tinkerer by night. I build games to delight 
+        my <span id="ageSpan"></span>-year-old, legal-stuff that helps me at work, and lots of other 
+        stuff. I'm currently leveling up my skills in a web dev coding bootcamp.</p>
+        <img id="headShot" src="assets/media/bio-square-lg.jpg" alt="Image of Eric Lindstrom">
+      </section>
+
     </article>
 
-    <article id="projects">
-      <h2>some projects</h2>
-      <section id="iago">
-        <figure><img src="assets/media/iago.png" width="100px"/></figure>
-        <figcaption>Iago: iOS / JavaScript Game</figcaption>
-      </section>
-
-      <section id="oahDatabase">
-        <figure><img src="assets/media/oah2.png" width="100px"/></figure>
-        <figcaption>OAH Database: Python Stack Search Engine</figcaption>
-      </section>
-
-      <section id="enSafari">
-        <figure><img src="assets/media/ensafari1.png" width="100px"/></figure>
-        <figcaption>EnSafari: iOS Game</figcaption>
-      </section>
-    </article>
+    <!--Projects-->
+    <article class="row" id="projectsAnchor">  
+      <aside class="cell"><h2>some projects</h2></aside>
     
-    <article id="contacts">
-      <h2>contacts</h2>
-      <a href="mailto:elindstr@gmail.com">Email</a>
-      <a href="https://github.com/elindstr">Eric the Coder on GitHub</a>
-      <a href="https://l2c2p.com/attorneys/eric-lindstrom">Eric the Lawyer</a>
+      <article id="projects" class="cell flex-container">
+        
+        <section id="iago" class="flex-item featured">
+          <div id="figure"></div>
+          <figcaption>Iago: Swift / JavaScript</figcaption>
+        </section>
+
+          <!--Iago Modal-->
+          <div id="iagoModal" class="modal">
+            <article id="iagoModalContent" class="modalContent">
+              <img src="assets/media/full/iago.png"/>
+              <section>
+                <h1>Iago: Swift / JavaScript</h1>
+                <h2>Hosted on <a href="https://github.com/elindstr/iago">GitHub</a></h2>
+                <p>First developed for iOS in 2020 out of a pandemic hobby, Iago is now a javascript web app (where developers are free!).</p>
+                  
+                <p>The robot analyzes the current board position solely with conditional logic choosing among the current potential moves. Nevertheless, the robot is surprisingly able to outperform small children.</p>
+                  
+                <p>Iago provides gameplay options of human v. human, human v. robot, or (look out!) robot v. robot. Iago has multiple features including a new game button, a back button, and the ability to convert either player to robot or human mid-game.</p>
+                
+                <p>Othello is a passion of mine, and I had a lot of fun developing this game as one of my first serious programming projects.</p>
+
+              </section>
+            </Article>
+          </div>
+
+        <section id="tetris" class="flex-item">
+          <div id="figure"></div>
+          <figcaption>Tetris: JavaScript / PHP</figcaption>
+        </section>
+
+        <!--Tetris Modal-->
+        <div id="tetrisModal" class="modal">
+          <article id="tetrisModalContent" class="modalContent">
+            <img src="assets/media/full/tetris.png"/>
+            <section>
+              <h1>Tetris: JavaScript / PHP</h1>
+              <h2>Deployed at <a href="https://ericjlindstrom.com/tetris/">ericjlindstrom.com/tetris/</a></h2>
+              <p>I took a few weeks off work in July 2022 to recover from brain surgery, and wrote this program as proof to myself that my brain still worked. It could use some more polishing. This was my first practice implementing PHP to store high score data.</p>
+            </section>
+          </Article>
+        </div>
+
+        <section id="birding" class="flex-item">
+          <div id="figure"></div>
+          <figcaption>Birding: JavaScript / Google Maps API</figcaption>
+        </section>
+
+        <!--Birding Modal-->
+        <div id="birdingModal" class="modal">
+          <article id="birdingModalContent" class="modalContent">
+            <img src="assets/media/full/birding.png"/>
+            <section>
+              <h1>Birding: JavaScript / Google Maps API</h1>
+              <h2>Deployed at <a href="https://ericjlindstrom.com/geo/">ericjlindstrom.com/geo/</a></h2>
+              <p>Integrating APIs data from Google Maps and eBird, this web app displays recent bird sightings based on the user's current location and provides a link to the bird species' wikipedia page. I got into birding in 2022 and used this app for myself. First time using Google Maps API.</p>
+            </section>
+          </Article>
+        </div>
+
+        <section id="ensafari" class="flex-item">
+          <div id="figure"></div>
+          <figcaption>EnSafari: iOS/Swift</figcaption>
+        </section>
+
+        <!--EnSafari Modal-->
+        <div id="ensafariModal" class="modal">
+          <article id="ensafariModalContent" class="modalContent">
+            <figure><img src="assets/media/full/ensafari1.png"/></figure>
+            <section>
+              <h1>EnSafari: Swift</h1>
+              <h2>Registry in iOS App Store expired</h2>
+              <p>This was my first time coding in Swift and my first app accepted into the App Store. This was a flash card app for learning to read and speak animal names in French and English. My wife is French and we made this for our son.</p>
+
+              <p>I allowed the registry in the App Store to expire. Apple should be paying developers; not the other way around.</p>
+            </section>
+          </Article>
+        </div>
+
+        <section id="oah" class="flex-item">
+          <div id="figure"></div>
+          <figcaption>OAH Search: Python Stack</figcaption>
+        </section>
+
+        <!--OAH Modal-->
+        <div id="oahModal" class="modal">
+          <article id="oahModalContent" class="modalContent">
+            <img src="assets/media/full/oah.png"/>
+            <section>
+              <h1>OAH Search: Python Stack</h1>
+              <p>I regularly litigate before the California Office of Administration Hearings (OAH), which adjudicates thousands of disputes involving public agencies each year. Amazingly, OAH does not publish its decisions.</p>
+
+              <p>Annually, I send OAH a request pursuant to the California Public Records Act, asking for all the decisions issued that year for the subset of OAH cases I care about. OAH produces these decisions to me in one giant PDF scan. I have some python scripts that recognize and OCR each decision, and then save it as both a PDF and a text file. I then upload the files to a python web server, which serves a website allowing users to search for decisions among several types of cases.</p>
+
+              <p>This database is tremendously useful in my law practice, giving my firm ready access to decisions that are not publicly accessible.</p>
+
+              <p>This was my first time using python as a web server, and my first time creating a database search engine.</p>
+            </section>
+          </Article>
+        </div>
+
+
+        <section id="deadlines" class="flex-item">
+          <div id="figure"></div>
+          <figcaption>Briefing Calculator: JS</figcaption>
+        </section>
+
+          <!--Deadlines Modal-->
+          <div id="deadlinesModal" class="modal">
+            <article id="deadlinesModalContent" class="modalContent">
+              <figure><img src="assets/media/full/deadlines2.png"/></figure>
+              <section>
+                <h1>Briefing Calculator: JS</h1>
+                <h2>Deployed at <a href="https://ericjlindstrom.com/deadlines/">ericjlindstrom.com/deadlines/</a></h2>
+                <p>Simple form to calculate briefing schedules under California Civil Code of Procedure section 1005, which requires knowledge of court holidays and counting by court days and calendar days, with additional days for service depending on the means of service.</p>
+              </section>
+            </Article>
+          </div>
+
+        <section id="counties" class="flex-item">
+          <div id="figure"></div>
+          <figcaption>Learn Counties: JS / SVG</figcaption>
+        </section>
+
+          <!--Counties Modal-->
+          <div id="countiesModal" class="modal">
+            <article id="countiesModalContent" class="modalContent">
+              <figure><img src="assets/media/full/counties.png"/></figure>
+              <section>
+                <h1>Briefing Calculator: JS / SVG</h1>
+                <h2>Deployed at <a href="https://ericjlindstrom.com/counties/">ericjlindstrom.com/counties/</a></h2>
+                <p>Tool for learning California Counties.</p>
+
+                <p>My first time using SVG.</p>
+              </section>
+            </Article>
+          </div>
+
+        <section id="shapes" class="flex-item">
+          <div id="figure"></div>
+          <figcaption>Learn Shapes: JS / SVG</figcaption>
+        </section>
+
+          <!--Shapes Modal-->
+          <div id="shapesModal" class="modal">
+            <article id="shapesModalContent" class="modalContent">
+              <figure><img src="assets/media/full/shapes.png"/></figure>
+              <section>
+                <h1>Learn Shapes: JS / SVG</h1>
+                <h2>Deployed at <a href="https://ericjlindstrom.com/lego/">ericjlindstrom.com/lego/</a></h2>
+                <p>A learning tool I originally built for my son, but then I challenged myself to program the 3d shapes.</p>
+              </section>
+            </Article>
+          </div>
+
+      </article> <!--end article cell-->
+    </article> <!--end article table-->
+
+    <!--Contact-->
+    <article class="row" id="contactAnchor">
+      <aside class="cell"><h2>contact</h2></aside>
+      <section id="contacts">
+        <p><a href="mailto:elindstr@gmail.com">Email</a></p>
+        <p><a href="https://github.com/elindstr">GitHub</a></p>
+        <p><a href="https://www.linkedin.com/in/eric-lindstrom-24439b27/">LinkedIn</a></p>
+        <p><a href="https://l2c2p.com/attorneys/eric-lindstrom">Eric the Lawyer</a></p>
+      </section>
     </article>
+
   </main>
 
-  <aside>
-    ...
-  </aside>
+  <footer><p>&copy; 2023 Eric Lindstrom</p></footer>
 
-
-  <script src="./assets/script.js"></script>
+  <script src="./assets/js/script.js"></script>
 </body>
 </html>

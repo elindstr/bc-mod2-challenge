@@ -1,55 +1,278 @@
-/*
+
 @font-face {
-  font-family: 'Orbitron';
-  src: url(./Orbitron/Orbitron-VariableFont_wght.ttf);
-}*/
+  font-family: 'Crimson';
+  src: url(./Crimson_Text/CrimsonText-Regular.ttf);
+}
+@font-face {
+  font-family: 'Vollkorn';
+  src: url(./Vollkorn/static/Vollkorn-Regular.ttf);
+}
 
 :root{
-  --header-background-color: black;
-  --header-color: white;
-  --nav-link-background-color: white;
+  --max-body-width: 1200px;
+  --max-section-width: 90%;
+
+  --yellow:#e7e5b6;
+  --hover-yellow:#e2df8b;
+  --green: #93C178;
+  --blue: #465C8B;
+  --white: #DFDCE3;
+
+  --transformation-speed: .3s
+
 }
 * {
   margin: 0;
   padding: 0;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
-  font-family: 'Tahoma', sans-serif;
-  background-color: white;
+  font-family: 'Vollkorn', 'Georgia', serif;
+  background-color: var(--white);
+  max-width: var(--max-body-width);
+  margin: 0px auto;
 }
 
 header {
   margin: 20px auto;
-  max-width: 600px;
-  background-color: var(--header-background-color);
-  color: var(--header-color);
+  margin-bottom: 0px;
+  max-width: var(--max-section-width);
+  background-color: var(--blue);
+  color: var(--header-text-color);
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 header h1 {
-  font-family: serif;
+  font-size: 3em;
+  font-family: 'Crimson', 'Georgia', serif;
+  margin: 20px;
+  margin-left: 0px;
+  padding: 5px;
+  background-color: var(--white);
+  color: var(--blue);
 }
-header nav {
-  font-family: serif;
+nav li {
+  display: inline;
 }
-header a {
-  color: var(--nav-link-background-color);
+nav a {
+  margin: 10px;
+  color: var(--white);
+  font-family: 'Vollkorn', 'Georgia', serif;
+  font-size: 1.2em;
+
+}
+
+
+#subtitle-container {
+  margin: 20px auto;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  max-width: var(--max-section-width);
+  position: relative;
+  height: 100px;
+}
+#subtitle-figure {
+  background-image: url("../media/zoom/iago.png");
+  background-size: cover;
+  background-position: 90% 90%;
+  opacity: 1;
+  width: 100%;
+  height: 100%;
+  opacity: .3;
+}
+#subtitle {
+  padding: 5px;
+  position: absolute;
+  bottom: 10%;
+  right: 5%;
+  font-size: 2em;
+  color: var(--blue);
+  font-family: 'Crimson', serif;
+  background-color: var(--white);
+}
+#subtitle-quotes{
+  font-size: 1.5em;
+}
+
+
+.row {
+  display: table;
+  margin-top: 20px;
+  width: 100%;
+}
+aside {
+  border-right: 2px solid var(--green);
+  width: 110px;
+  color: var(--blue);
+  font-size: 1.2em;
+  width: 120px;
+}
+.cell {
+  display: table-cell; 
+  padding: 20px
 }
 
 main {
-  margin: 5px auto;
-  max-width: 600px;
+  margin: 10px auto;
+  max-width: var(--max-section-width);
 }
 
+#aboutMe{
+  display: flex;
+}
 #aboutMe p {
-  color: black;
+  color: var(--blue);
+  font-size: 1.2em;
+  padding: 5px;
 }
 #headShot {
   width: 150px;
-  float: right;
+  height: 150px;
   border-radius: 50%;
+  float: right;
 }
 
-article section {
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-evenly;
+}
+.flex-item {
+  border: 3px solid var(--yellow);
+  margin: 5px;
+  text-align: left;
+  align-items: end;
+  flex: 1 1;
+  min-width: 200px;
+  max-width: 400px;
+  height: 100px;
+  position: relative;
+  transition: border var(--transformation-speed) ease;
+}
+.featured {
+  max-width: unset;
+  flex: 1 1 100%;
+}
+#figure{
+  background-size: cover;
+  opacity: .2;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: opacity var(--transformation-speed) ease;
+}
+figcaption{ 
+  font-size: 1.5em;
+  position: absolute;
+  background-color: var(--yellow);
+  color: var(--blue);
+  bottom: 10%;
+  transition: background-color var(--transformation-speed) ease;
+}
+
+.flex-item:hover {
+  border: 3px solid var(--hover-yellow);
+}
+.flex-item:hover figcaption {
+  background-color: var(--hover-yellow);
+}
+#figure:hover{
+  opacity: .6;
+}
+
+#iago div {
+  background-image: url("../media/zoom/iago.png");
+}
+#tetris div {
+  background-image: url("../media/zoom/tetris.png");
+}
+#birding div {
+  background-image: url("../media/zoom/birding.png");
+}
+#ensafari div {
+  background-image: url("../media/zoom/ensafari.png");
+}
+#oah div {
+  background-image: url("../media/zoom/oah.png");
+}
+#deadlines div {
+  background-image: url("../media/zoom/deadlines.png");
+}
+#counties div {
+  background-image: url("../media/zoom/counties.png");
+}
+#shapes div {
+  background-image: url("../media/zoom/shapes.png");
+}
+
+#contacts {
+  display: flex;
+  justify-content:space-evenly;
+}
+#contacts span {
+  flex: 1 1;
+}
+#contacts a {
+  color: var(--blue);
+  font-family: 'Vollkorn', 'Georgia', serif;
+  font-size: 1.2em;
+}
+
+
+footer {
+  margin: 20px auto;
   padding: 10px;
+  max-width: var(--max-section-width);
+  background-color: var(--blue);
+  color: var(--white);
+  font-size: small;
+  text-align: right;
+}
+
+@media screen and (max-width: 590px) {
+  header h1 {
+    font-size: 2em;
+  }
+  nav ul {
+    display: flex;
+    flex-direction: column;
+  }
+  #subtitle {
+    bottom: 10%;
+    right: 5%;
+    font-size: 1.5em;
+  }
+  #subtitle-quotes{
+    font-size: 1.5em;
+  }
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: unset;
+  }
+  .cell {
+    padding: unset;
+  }
+  aside {
+    border-right: unset;
+    border-bottom: 2px solid var(--green);
+  }
+  #contactAnchor {
+    display: block;
+  }
+  #contactAnchor #cell {
+    display: block;
+  }
+  #contacts {
+    display: flex;
+    flex-direction: column;
+    height: 120px;
+  }
+  #contacts a {
+    margin-left: 30px;
+    padding: 10px;
+  }
 }
