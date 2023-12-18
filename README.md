@@ -7,7 +7,7 @@ I enjoyed practicing a bunch of css tricks making this: responsive design; flex 
 
 I used the Xcode simulator to capture screenshots of an iPhone 15 running the deployed apps.
 
-Deployed on [GitHub Pages] (https://elindstr.github.io/erics-portfolio/)
+Deployed on [GitHub Pages](https://elindstr.github.io/erics-portfolio/)
 
 ## Screenshots
 
