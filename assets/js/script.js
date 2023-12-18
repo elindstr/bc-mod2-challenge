@@ -1,12 +1,10 @@
-//console.log("script.js loaded")
-
-//dynamically populate my son's age
+//dynamically populate my son's age---listed in my bio.
 var currentDate = new Date();
 var age = currentDate.getFullYear() - 2016;
 if (currentDate.getMonth() <= 8 && currentDate.getDate() < 2) {age--};
 document.getElementById("ageSpan").innerHTML = age;
 
-//listeners to control modal windows 
+//Event listeners so that each project's icon loads a modal window with content when clicked. There was a bug I believe when the listeners were sometimes not activating because I believe the DOM element wasn't actually loaded. So the click listeners are delayed until the DOM is loaded.
 document.addEventListener("DOMContentLoaded", function() {
 
     document.getElementById("iago").addEventListener("click", (e) => {

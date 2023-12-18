@@ -1,12 +1,14 @@
-@font-face {
+/* google fonts */
+@font-face { /* used for H1 and subtitle*/
   font-family: 'Crimson';
   src: url(./Crimson_Text/CrimsonText-Regular.ttf);
 }
-@font-face {
+@font-face { /* used for rest of page*/
   font-family: 'Vollkorn';
   src: url(./Vollkorn/static/Vollkorn-Regular.ttf);
 }
 
+/* global variables */
 :root{
   --max-body-width: 1200px;
   --max-section-width: 90%;
@@ -20,12 +22,14 @@
 
   --transformation-speed: .2s
 }
+
+/* general */
 * {
   margin: 0;
   padding: 0;
 }
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth;  /* this causes nav links to move smoothly*/
 }
 body {
   font-family: 'Vollkorn', 'Georgia', serif;
@@ -34,6 +38,7 @@ body {
   margin: 0px auto;
 }
 
+/* header section */
 header {
   margin: 20px auto;
   margin-bottom: 0px;
@@ -64,12 +69,12 @@ nav a {
 }
 a {
   font-weight: normal;
-  /*transition: font-weight .3s ease-in;*/
 }
 a:hover {
   font-weight:900;
 }
 
+/* subtitle section */
 #subtitle-container {
   margin: 20px auto;
   margin-top: 0px;
@@ -103,6 +108,7 @@ a:hover {
   font-size: 1.5em;
 }
 
+/* about me and projects sections */
 .row {
   display: table;
   margin-top: 15px;
@@ -179,7 +185,7 @@ figcaption{
   transition: background-color var(--transformation-speed) ease;
 }
 
-
+/* hovering: both of these selectors are necessary so that hovering over the figure and hovering over figure captions EACH result in hovering the entire figure */
 #projects section:hover .figure{
   opacity: 0.6;
 } 
@@ -188,6 +194,7 @@ figcaption{
 } 
 
 
+/* projects icon pictures */
 #iago div {
   background-image: url("../media/zoom/iago.png");
 }
@@ -213,6 +220,7 @@ figcaption{
   background-image: url("../media/zoom/shapes.png");
 }
 
+/* contacts and footer sections */
 #contacts {
   display: flex;
   justify-content:space-evenly;
@@ -235,6 +243,7 @@ footer {
   font-size: small;
   text-align: right;
 }
+
 
 @media screen and (max-width: 650px) {
   nav {
