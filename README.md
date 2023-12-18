@@ -1,4 +1,4 @@
-# bc-mod2-challenge: Eric's Portfolio
+# Eric's Portfolio: showing off some of my coding projects in a responsive web design
 
 ## Description
 This is a portfolio website showing off some of my projects.
@@ -6,6 +6,8 @@ This is a portfolio website showing off some of my projects.
 I enjoyed practicing a bunch of css tricks making this: responsive design; flex boxes; semi-transparent background images with hover transitions; css variables; google fonts; smooth scroll behavior; modal windows. 
 
 I used the Xcode simulator to capture screenshots of an iPhone 15 running the deployed apps.
+
+Deployed on [GitHub Pages] (https://elindstr.github.io/erics-portfolio/)
 
 ## Screenshots
 
